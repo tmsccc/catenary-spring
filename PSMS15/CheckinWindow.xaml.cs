@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PSMS15
 {
     /// <summary>
-    /// Window2.xaml 的交互逻辑
+    /// checkinwindow.xaml 的交互逻辑
     /// </summary>
-    public partial class Window2 : Window
+    public partial class checkinwindow : Window
     {
-        public Window2()
+        public checkinwindow()
         {
             InitializeComponent();
         }
@@ -42,6 +42,18 @@ namespace PSMS15
         private void Button_MouseLeftButtonDown_3(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            infowindow ifw = new infowindow();
+            ifw.Show ();
+
+
+            //ifw.StartPosition = FormStartPosition.CenterParent;
+
+            //mylogin.ShowDialog();
         }
     }
 }
