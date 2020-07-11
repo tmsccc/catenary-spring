@@ -15,15 +15,28 @@ using System.Windows.Shapes;
 namespace PSMS15
 {
     /// <summary>
-    /// SalaryWindow.xaml 的交互逻辑
+    /// Window3.xaml 的交互逻辑
     /// </summary>
-    public partial class SalaryWindow : Window
+    public partial class Window3 : Window
     {
-        public SalaryWindow()
+        public Window3()
         {
             InitializeComponent();
         }
 
+        private void Button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
 
+        }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Button_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

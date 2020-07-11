@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PSMS15
 {
     /// <summary>
-    /// SalaryWindow.xaml 的交互逻辑
+    /// UserWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class SalaryWindow : Window
+    public partial class UserWindow : Window
     {
-        public SalaryWindow()
+        public UserWindow()
         {
             InitializeComponent();
         }
