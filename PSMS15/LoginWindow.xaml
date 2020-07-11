@@ -16,13 +16,13 @@
         <TextBlock Height="17" Margin="205.05,210.7,0,0" TextWrapping="Wrap" Text="密码" Width="38" FontSize="10" Foreground="#FF889096" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <TextBox HorizontalAlignment="Left" Height="27" Margin="205.05,175.7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
         <PasswordBox HorizontalAlignment="Left" Height="27" Margin="205.05,227.6,0,0" VerticalAlignment="Top" Width="161"/>
-        <Button HorizontalAlignment="Left" Height="27" Margin="205.05,301.8,0,0" VerticalAlignment="Top" Width="161" Background="#FF68B9B1">
+        <Button HorizontalAlignment="Left" Height="27" Margin="205.05,301.8,0,0" VerticalAlignment="Top" Width="161" Background="#FF68B9B1" MouseLeftButtonDown="Button_MouseLeftButtonDown">
             <TextBlock Text="登录" Foreground="White"/>
         </Button>
         <RadioButton HorizontalAlignment="Left" Margin="217.05,271.8,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.124,0.632" FontSize="10">
-            <TextBlock Text="管理员" Foreground="#FF889096"/>
+            <TextBlock Text="管理员" Foreground="#FF889096" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
         </RadioButton>
-        <RadioButton HorizontalAlignment="Left" Height="14.24" Margin="303.25,271.8,0,0" VerticalAlignment="Top" Width="54.8" RenderTransformOrigin="0.201,0.351" FontSize="10">
+        <RadioButton HorizontalAlignment="Left" Height="14.24" Margin="303.25,271.8,0,0" VerticalAlignment="Top" Width="54.8" RenderTransformOrigin="0.5,0.5" FontSize="10" MouseLeftButtonDown="RadioButton_MouseLeftButtonDown">
             <TextBlock Text="员工" Foreground="#FF889096"/>
         </RadioButton>
     </Grid>
