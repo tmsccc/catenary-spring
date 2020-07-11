@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using PMS15.DAL;
+using PMSM.DAL;
 using PSM;
 using PSMS.Model;
 using System;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace PSMS.DAL
 {
-    class AccountDAL
+   public class AccountDAL
     {
         SqlDbHelper db = new SqlDbHelper();
         UserDAL userdal = new UserDAL();
@@ -19,19 +19,21 @@ namespace PSMS.DAL
         public int AddAccount(int number,String password)
         {
             //sql语句
-            String sql = "INSERT INTO t_account(user_account,user_password,Is_del) VALUES(@user_id,@user_account,@user_password,@Isdel)";
+            String sql = "INSERT INTO t_account(user_id,user_account,user_password,Is_del) VALUES(@user_id,@user_account,@user_password,@is_del)";
             //参数列表
             MySqlParameter[] param = {
+                                       new MySqlParameter("@user_id",SqlDbType.Int),
                                        new MySqlParameter("@user_account",SqlDbType.Int),
                                        new MySqlParameter("@user_password",SqlDbType.VarChar),
-                                       new MySqlParameter("@Is_del",SqlDbType.Int),
+                                       new MySqlParameter("@is_del",SqlDbType.Int),
                                      
                                    };
 
             //参数赋值
-            param[0].Value = number;
-            param[1].Value = password;
-            param[2].Value = 0;
+            param[0].Value = 3;
+            param[1].Value = number;
+            param[2].Value = password;
+            param[3].Value = 0;
             return db.ExecuteNonQuery(sql, param);
         }
         //实现登陆,只返回Account的对象，如果数据库中没有与输入的账号密码匹配，则返回为空

@@ -18,7 +18,7 @@ namespace PMSM.DAL
 		public int AddUser(User user)
 		{
 			//sql语句
-			String sql = "INSERT INTO t_user(emp_id,emp_name,emp_sex,emp_job,emp_entrytime,emp_mailbox,emp_department,Is_del) VALUES(@emp_id,@emp_name,@emp_sex,@emp_job,@emp_entrytime,@emp_mailbox,@emp_department,@Is_del)";
+			String sql = "INSERT INTO t_user(emp_id,emp_name,emp_sex,emp_job,emp_entrytime,emp_emailbox,emp_department,Is_del) VALUES(@emp_id,@emp_name,@emp_sex,@emp_job,@emp_entrytime,@emp_emailbox,@emp_department,@Is_del)";
 			//参数列表
 			MySqlParameter[] param = {
 				 new MySqlParameter("@emp_id",MySqlDbType.Int32),
@@ -26,9 +26,9 @@ namespace PMSM.DAL
 				 new MySqlParameter("@emp_sex",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_job",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_entrytime",MySqlDbType.DateTime),
-				 new MySqlParameter("@emp_mailbox",MySqlDbType.VarChar),
+				 new MySqlParameter("@emp_emailbox",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_department",MySqlDbType.VarChar),
-				 new MySqlParameter("@emp_department",MySqlDbType.Int16),
+				 new MySqlParameter("@Is_del",MySqlDbType.Int16),
 
 			};
 			param[0].Value = user.id;
@@ -46,7 +46,7 @@ namespace PMSM.DAL
 		//更新用户信息
 		public int UpdateUser(User user)
 		{
-			String sql = "UPDATE t_user SET emp_name=@emp_name,emp_sex=@emp_sex,emp_job=@emp_job,emp_entrytime=@emp_entrytime,emp_department=@emp_department,Is_del=@is_del WHILE emp_id=@emp_id";
+			String sql = "UPDATE t_user SET emp_name=@emp_name,emp_sex=@emp_sex,emp_job=@emp_job,emp_entrytime=@emp_entrytime,emp_emailbox=@emp_emailbox,emp_department=@emp_department,Is_del=@is_del WHERE emp_id=@emp_id";
 			//参数列表
 			MySqlParameter[] param ={
 			  	 new MySqlParameter("@emp_id",MySqlDbType.Int32),
@@ -54,9 +54,9 @@ namespace PMSM.DAL
 				 new MySqlParameter("@emp_sex",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_job",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_entrytime",MySqlDbType.DateTime),
-				 new MySqlParameter("@emp_mailbox",MySqlDbType.VarChar),
+				 new MySqlParameter("@emp_emailbox",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_department",MySqlDbType.VarChar),
-				 new MySqlParameter("@emp_department",MySqlDbType.Int16),
+				 new MySqlParameter("@Is_del",MySqlDbType.Int16),
 
 			};
 			//参数赋值
@@ -73,7 +73,7 @@ namespace PMSM.DAL
 		//软删除，改变Is_del字段的值实现删除，Is_del字段如果为——1，则用户不存在
 		public int SoftDelete(int id)
 		{
-			String sql = "UPDATE t_uesr SET Is_del=1 WHERE emp_id=" + id;
+			String sql = "UPDATE t_user SET Is_del=1 WHERE emp_id=" + id;
 			return db.ExecuteNonQuery(sql);
 		}
 		//硬删除，直接用删除语句进行删除
@@ -108,10 +108,11 @@ namespace PMSM.DAL
 		//通过id寻找用户信息,返回的是对象
 		public User GetUserById(int id)
 		{
-			String sql = "SSELECT * FROM t_user WHERE emp_id=@id";
+			String sql = "SELECT * FROM t_user WHERE emp_id=@id";
 			MySqlParameter[] param = {
 										new MySqlParameter("@id",MySqlDbType.Int32)
 								   };
+			param[0].Value = id;
 			DataTable dt = db.ExecuteDataTable(sql, param);
 			User user = null;
 			if (dt.Rows.Count > 0)
@@ -130,14 +131,14 @@ namespace PMSM.DAL
 
 			//user.Id = Convert.ToInt32(dr[0]);
 			user.id = Convert.ToInt32(dr["emp_id"]);
-			if (dr["entry_time"] != DBNull.Value)//判断日期非空
+			if (dr["emp_entrytime"] != DBNull.Value)//判断日期非空
 			{
 				user.entrytime = Convert.ToDateTime(dr["emp_entrytime"]);
 			}
 			user.name = Convert.ToString(dr["emp_name"]);
 			user.sex = Convert.ToString(dr["emp_sex"]);
 			user.job = Convert.ToString(dr["emp_job"]);
-			user.email = Convert.ToString(dr["emp_email"]);
+			user.email = Convert.ToString(dr["emp_emailbox"]);
 			user.is_del = Convert.ToInt32(dr["Is_del"]);
 			user.department = Convert.ToString(dr["emp_department"]);
 			return user;
