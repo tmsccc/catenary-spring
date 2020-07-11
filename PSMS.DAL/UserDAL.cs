@@ -9,9 +9,9 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using PSM;
 
-namespace PSMS.DAL
+namespace PMS15.DAL
 {
-	public class UserDAL
+	class UserDAL
 	{
 		SqlDbHelper db = new SqlDbHelper();
 		//添加员工信息

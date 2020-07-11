@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using PMS15.DAL;
 using PSM;
 using PSMS.Model;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace PSMS.DAL
 {
-    public class AccountDAL
+    class AccountDAL
     {
         SqlDbHelper db = new SqlDbHelper();
         UserDAL userdal = new UserDAL();
