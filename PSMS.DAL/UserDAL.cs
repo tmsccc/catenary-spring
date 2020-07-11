@@ -46,7 +46,7 @@ namespace PMS15.DAL
 		//更新用户信息
 		public int UpdateUser(User user)
 		{
-			String sql = "UPDATE t_user SET emp_name=@emp_name,emp_sex=@emp_sex,emp_job=@emp_job,emp_entrytime=@emp_entrytime,emp_department=@emp_department WHILE emp_id=@emp_id";
+			String sql = "UPDATE t_user SET emp_name=@emp_name,emp_sex=@emp_sex,emp_job=@emp_job,emp_entrytime=@emp_entrytime,emp_department=@emp_department,Is_del=@is_del WHILE emp_id=@emp_id";
 			//参数列表
 			MySqlParameter[] param ={
 			  	 new MySqlParameter("@emp_id",MySqlDbType.Int32),
@@ -70,13 +70,13 @@ namespace PMS15.DAL
 			param[7].Value = user.is_del;
 			return db.ExecuteNonQuery(sql, param);
 		}
-		//软删除，Is_del字段如果为——0，则用户不存在
+		//软删除，改变Is_del字段的值实现删除，Is_del字段如果为——1，则用户不存在
 		public int SoftDelete(int id)
 		{
 			String sql = "UPDATE t_uesr SET Is_del=1 WHERE emp_id=" + id;
 			return db.ExecuteNonQuery(sql);
 		}
-		//硬删除
+		//硬删除，直接用删除语句进行删除
 		public int RealDelete(int id)
 		{
 			String sql = "DELETE FROM t_user WHERE emp_id=" + id;
@@ -97,7 +97,7 @@ namespace PMS15.DAL
 			return users;
 
 		}
-		//以DataTable的形式返回数据
+		//以DataTable的形式返回数据，查找所有的用户信息
 		public DataTable GetAllUsers()
 		{
 			int is_Del = 0;
@@ -105,7 +105,25 @@ namespace PMS15.DAL
 			DataTable dt = db.ExecuteDataTable(sql);
 			return dt;
 		}
-		//从datable中获取数据
+		//通过id寻找用户信息,返回的是对象
+		public User GetUserById(int id)
+		{
+			String sql = "SSELECT * FROM t_user WHERE emp_id=@id";
+			MySqlParameter[] param = {
+										new MySqlParameter("@id",MySqlDbType.Int32)
+								   };
+			DataTable dt = db.ExecuteDataTable(sql, param);
+			User user = null;
+			if (dt.Rows.Count > 0)
+			{
+
+				DataRow dr = dt.Rows[0];
+				user = DataRowToUser(dr);
+			}
+			return user;
+		}
+
+		//从datable中获取数据，将DataTable中每一行的数据转保存到User的对象中
 		private User DataRowToUser(DataRow dr)
 		{
 			User user = new User();
