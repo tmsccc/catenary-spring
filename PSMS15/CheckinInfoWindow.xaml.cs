@@ -15,28 +15,13 @@ using System.Windows.Shapes;
 namespace PSMS15
 {
     /// <summary>
-    /// Window1.xaml 的交互逻辑
+    /// Window4.xaml 的交互逻辑
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window4 : Window
     {
-        public Window1()
+        public Window4()
         {
             InitializeComponent();
-        }
-
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void RadioButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
         }
     }
 }
