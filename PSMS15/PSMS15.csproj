@@ -157,5 +157,15 @@
   <ItemGroup>
     <Resource Include="Resources\签到.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PSMS.BLL\PSMS.BLL.csproj">
+      <Project>{f802a1ac-14d4-4498-ac57-54a6675fc10c}</Project>
+      <Name>PSMS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PSMS.Model\PSMS.Model.csproj">
+      <Project>{60eb4db0-1d30-4ff3-9094-594be4d2bad0}</Project>
+      <Name>PSMS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

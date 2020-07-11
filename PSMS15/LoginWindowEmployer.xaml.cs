@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PSMS.BLL;
 
 namespace PSMS15
 {
@@ -35,6 +36,25 @@ namespace PSMS15
         }
 
         private void Button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (rb1.IsChecked == true)
+            { 
+            ManagerBLL mb = new ManagerBLL();
+                if (mb.ManagerLogin(nametb.Text, pwdtb.Password))
+                {
+                    InfoWindow ifw = new InfoWindow();
+                    ifw.Show();
+                }
+            }
+            
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
