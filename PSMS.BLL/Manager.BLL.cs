@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace PSMS.BLL
 {
-    class Manager
+    class ManagerBLL
     {
-        public bool Login(string name, string pwd, out User user)//out
+        string id = "2018112558";
+        string pwd = "2018112558";
+        public bool ManagerLogin(string id, string pwd )
         {
-            
-            if (manager.pwd == pwd)
-            {return 1; }
 
-            return 0;
-            
+            if (this.pwd == pwd&&this.id ==id)
+            { return true; }
+
+            return false ;
+
         }
 
     }
