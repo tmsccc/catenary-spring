@@ -60,27 +60,39 @@
     <Compile Include="CheckinWindow.xaml.cs">
       <DependentUpon>CheckinWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CheckinWindowEmployer.xaml.cs">
+      <DependentUpon>CheckinWindowEmployer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LoginWindow.xaml.cs">
-      <DependentUpon>LoginWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="InfoWindow.xaml.cs">
       <DependentUpon>InfoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CheckinInfoWindow.xaml.cs">
-      <DependentUpon>CheckinInfoWindow.xaml</DependentUpon>
+    <Compile Include="LoginWindowEmployer.xaml.cs">
+      <DependentUpon>LoginWindowEmployer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindowEmployer.xaml.cs">
+      <DependentUpon>InfoWindowEmployer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckinInfoWindowEmployer.xaml.cs">
+      <DependentUpon>CheckinInfoWindowEmployer.xaml</DependentUpon>
     </Compile>
     <Compile Include="SalaryWindow.xaml.cs">
       <DependentUpon>SalaryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SalaryWindowEmployer.xaml.cs">
+      <DependentUpon>SalaryWindowEmployer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="CheckinWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginWindow.xaml">
+    <Page Include="CheckinWindowEmployer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,11 +100,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CheckinInfoWindow.xaml">
+    <Page Include="LoginWindowEmployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoWindowEmployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CheckinInfoWindowEmployer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SalaryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SalaryWindowEmployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +156,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\签到.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PSMS.BLL\PSMS.BLL.csproj">
+      <Project>{f802a1ac-14d4-4498-ac57-54a6675fc10c}</Project>
+      <Name>PSMS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PSMS.Model\PSMS.Model.csproj">
+      <Project>{60eb4db0-1d30-4ff3-9094-594be4d2bad0}</Project>
+      <Name>PSMS.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
