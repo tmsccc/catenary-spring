@@ -44,10 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.DAL.cs" />
+    <Compile Include="AccountDAL.cs" />
     <Compile Include="CheckWork.DAL.cs" />
     <Compile Include="SQLHelper.cs" />
-    <Compile Include="User.DAL.cs" />
+    <Compile Include="UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
