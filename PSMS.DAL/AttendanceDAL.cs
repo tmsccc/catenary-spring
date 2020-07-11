@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-
+using PSM;
 namespace PSMS.DAL
 {
-    class CheckWork
+    class Attendamce
     {
-
+        
+        
     }
 }

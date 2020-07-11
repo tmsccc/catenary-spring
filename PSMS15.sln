@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSMS.BLL", "PSMS.BLL\PSMS.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSMS.DAL", "PSMS.DAL\PSMS.DAL.csproj", "{3D969C45-8DEF-4473-93A3-4525097189CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSMS.DALTests", "PSMS.DALTests\PSMS.DALTests.csproj", "{7B9FF770-DE6A-4F69-BF13-CD4FCD48469D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3D969C45-8DEF-4473-93A3-4525097189CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D969C45-8DEF-4473-93A3-4525097189CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D969C45-8DEF-4473-93A3-4525097189CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9FF770-DE6A-4F69-BF13-CD4FCD48469D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9FF770-DE6A-4F69-BF13-CD4FCD48469D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9FF770-DE6A-4F69-BF13-CD4FCD48469D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9FF770-DE6A-4F69-BF13-CD4FCD48469D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

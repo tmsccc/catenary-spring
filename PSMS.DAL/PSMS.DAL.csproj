@@ -45,10 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountDAL.cs" />
-    <Compile Include="CheckWork.DAL.cs" />
+    <Compile Include="AttendanceDAL.cs" />
     <Compile Include="SQLHelper.cs" />
     <Compile Include="UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PSMS.Model\PSMS.Model.csproj">
+      <Project>{60eb4db0-1d30-4ff3-9094-594be4d2bad0}</Project>
+      <Name>PSMS.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
