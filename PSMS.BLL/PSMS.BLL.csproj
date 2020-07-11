@@ -9,10 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PSMS.BLL</RootNamespace>
     <AssemblyName>PSMS.BLL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +49,10 @@
     <ProjectReference Include="..\PSMS.DAL\PSMS.DAL.csproj">
       <Project>{3d969c45-8def-4473-93a3-4525097189ce}</Project>
       <Name>PSMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PSMS.Model\PSMS.Model.csproj">
+      <Project>{60eb4db0-1d30-4ff3-9094-594be4d2bad0}</Project>
+      <Name>PSMS.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
