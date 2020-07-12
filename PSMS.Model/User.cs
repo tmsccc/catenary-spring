@@ -11,7 +11,7 @@ namespace PSMS.Model
 		//无参构造函数
 		public User() { }
 		//带参构造函数
-		public User(int id, String name, String sex, String job, DateTime entrytime, String email, String department, int is_del)
+		public User(int id, String name, String sex, String job,int wages,DateTime entrytime, String email, String department, int is_del)
 		{
 			this.id = id;
 			this.name = name;
@@ -21,6 +21,7 @@ namespace PSMS.Model
 			this.email = email;
 			this.department = department;
 			this.is_del = is_del;
+			this.wages = wages;
 		}
 		public int id { set; get; }//员工编号
 		public String name { set; get; }//员工姓名
@@ -30,6 +31,7 @@ namespace PSMS.Model
 		public String email { set; get; }//员工邮箱地址
 		public String department { set; get; }//员工所属部门
 		public int is_del { set; get; }//用户是否删除
+		public int wages { set; get; } //员工基本工资
 
 	}
 }

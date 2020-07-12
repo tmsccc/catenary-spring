@@ -15,7 +15,7 @@ namespace PMSM.DAL.Tests
 
 		public void GetUserByIdTest()
 		{
-			User user = userdal.GetUserById(1009);
+			User user = userdal.GetUserById(1002);
 			Assert.IsNotNull(user);
 			//Assert.Fail();
 		}
@@ -23,7 +23,7 @@ namespace PMSM.DAL.Tests
 		[TestMethod()]
 		public void AddUserTest()
 		{
-			User user = new User(1009, "dsj", "sfdfsd", "sdfs", DateTime.Parse("2000-07-18"), "dscsz", "hklsa", 0);
+			User user = new User(1011, "dsj", "sfdfsd", "sdfs",1000, DateTime.Parse("2000-07-18"), "dscsz", "hklsa", 0);
 			userdal.AddUser(user);
 			Assert.IsNotNull(user);
 			//Assert.Fail();
@@ -32,7 +32,7 @@ namespace PMSM.DAL.Tests
 		[TestMethod()]
 		public void UpdateUserTest()
 		{
-			User user = new User(1000, "dsjddsads", "sfdfsd", "sdfdsadass", DateTime.Parse("2000-07-18"), "dscdsasasz", "hklsdasdasa", 0);
+			User user = new User(1003, "dsjddsads", "sfdfsd", "sdfdsadass",15000, DateTime.Parse("2000-07-18"), "dscdsasasz", "hklsdasdasa", 0);
 			userdal.UpdateUser(user);
 			Assert.IsNotNull(user);
 			//Assert.Fail();
@@ -48,7 +48,7 @@ namespace PMSM.DAL.Tests
 		[TestMethod()]
 		public void RealDeleteTest()
 		{
-			userdal.RealDelete(1000);
+			userdal.RealDelete(1002);
 			//Assert.Fail();
 		}
 
@@ -94,7 +94,7 @@ namespace PMSM.DAL.Tests
 		[TestMethod()]
 		public void UpDateEntryTest()
 		{
-			userdal.UpDateEntry(1002,"2010-07-19");
+			userdal.UpDateEntry(1002, "2010-07-19");
 			//Assert.Fail();
 		}
 
@@ -109,6 +109,13 @@ namespace PMSM.DAL.Tests
 		public void UpDateDepartmentTest()
 		{
 			userdal.UpDateDepartment(1002, "dsjdsdsa");
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpDateWagesTest()
+		{
+			userdal.UpDateWages(1003, 10000);
 			//Assert.Fail();
 		}
 	}
