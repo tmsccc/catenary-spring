@@ -189,17 +189,21 @@ namespace PSMS.BLL
 
     public class AccountBLL
     {
-        public bool UpdatePwd(int number, String newPwd,Account account,string oldPwd ,out string msg )
+        private AccountDAL dal = new AccountDAL();
+
+      
+
+        public bool UpdatePwd(int number, String newPwd,Account account,String oldPwd ,out string msg )
         {
-            Account oldaccount = AccountDAL.GetUserByLoginNameAndPassword(number,newPwd);
+            Account oldaccount = dal.GetUserByLoginNameAndPassword(number,newPwd);
             bool result = false;
-            Account e = AccountDAL.UpdatePwd(,newPwd );
-            if (e != null)
+            
+            if (oldaccount != null)
             {
-                if (e.password == oldPwd)
+                if (oldaccount.password == oldPwd)
                 {
                     //更新密码
-                    result = AccountDAL.UpdatePwd(e, newPwd) > 0;
+                    result = dal.UpdatePwd(oldaccount, newPwd) > 0;
                     if (result)
                     {
                         msg = "更新成功";
@@ -229,20 +233,7 @@ namespace PSMS.BLL
         /// <param name="pwd"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        public bool Login(string name, string pwd, int type, out User user)
-        {
-            bool result = false; //假设登录失败
-
-            user = dal.GetUserByLoginName(name, type);
-            if (user != null)
-            {
-                if (user.PassWord == pwd)
-                {
-                    result = true;
-                }
-            }
-            return result;
-        }
+     
     }
 
 
