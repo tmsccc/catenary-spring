@@ -9,9 +9,9 @@
       Title="CheckinEmployer">
 
     <Grid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Margin="0,0,0,-0.4" Stretch="Fill"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="6,85,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\签到.jpg" Margin="234,94,246,191.6" Width="92" />
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Margin="0,0,0,-0.4" Stretch="Fill"/>
+        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="6,85,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
+        <Image Source="Resources\签到.jpg" Margin="234,94,246,191.6" Width="92" />
         <TextBlock HorizontalAlignment="Left" Height="17" Margin="142,253,0,0" TextWrapping="Wrap" Text="上班打卡：" VerticalAlignment="Top" Width="66" RenderTransformOrigin="3.448,-0.929"/>
         <TextBlock HorizontalAlignment="Left" Height="17" Margin="208,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" />
         <TextBlock HorizontalAlignment="Left" Height="17" Margin="352,253,0,0" TextWrapping="Wrap" Text="下班打卡：" VerticalAlignment="Top" Width="66" RenderTransformOrigin="3.448,-0.929"/>

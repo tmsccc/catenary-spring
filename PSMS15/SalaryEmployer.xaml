@@ -9,8 +9,8 @@
       Title="SalaryEmployer">
 
     <Grid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Margin="0,0,0,-0.4" Stretch="Fill"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="6,179,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Margin="0,0,0,-0.4" Stretch="Fill"/>
+        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="6,179,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Height="36" Margin="194.887,64.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" FontSize="20" TextAlignment="Center" Text="查看工资"/>
         <Rectangle Grid.Column="2" Fill="#FF68B9B1" HorizontalAlignment="Left" Height="2" Margin="109.8,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="335"/>
 

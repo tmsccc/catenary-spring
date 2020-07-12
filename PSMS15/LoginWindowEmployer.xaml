@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="600" WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
     <Grid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\login1.jpg" Stretch="Fill"/>
+        <Image Source="Resources\login1.jpg" Stretch="Fill"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="291" Margin="175.05,70.6,0,0" Stroke="#FF090909" VerticalAlignment="Top" Width="228" StrokeThickness="0"/>
         <Rectangle Fill="#FF68B9B1" HorizontalAlignment="Left" Height="32" Margin="155.05,99.6,0,0" Stroke="#FF68B9B1" VerticalAlignment="Top" Width="230"/>
         <TextBlock HorizontalAlignment="Left" Height="24.22" Margin="189.05,107.38,0,0" TextWrapping="Wrap" Text="人事管理系统登录" VerticalAlignment="Top" Width="153" Foreground="#FFFAFAFA" TextAlignment="Center"/>

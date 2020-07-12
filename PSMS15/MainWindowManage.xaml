@@ -47,12 +47,12 @@
             <Rectangle Fill="#FF232525" HorizontalAlignment="Left" Height="25.8" Stroke="Black" VerticalAlignment="Top" Width="793.6" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,4,0,-4.2" TextWrapping="Wrap" Width="150" Height="26" VerticalAlignment="Top" Foreground="#FFF3F3F3" FontSize="13" TextAlignment="Center"><Run Background="Black" Text="人事管理系统--管理员"/></TextBlock>
         </Grid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,26,-0.4,0" Width="571" Grid.Column="1" Stretch="None" Grid.ColumnSpan="2"/>
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,26,-0.4,0" Width="571" Grid.Column="1" Stretch="None" Grid.ColumnSpan="2"/>
 
         <DataGrid x:Name="dgData" 
                       
                       Margin="49.8,114,45.6,135" Grid.Column="2" HorizontalAlignment="Center" Width="475">
-            <!--需要完善,除了序号，基本完善-->
+ 
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="编号" Width="40*" MinWidth="10" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="50*" Header="姓名" IsReadOnly="False"/>
@@ -64,7 +64,7 @@
                 <DataGridTextColumn Binding="{Binding Name}" Width="100*" Header="电子邮箱" IsReadOnly="False"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,120,0,0" VerticalAlignment="Top" Width="38" Grid.Column="2"/>
+        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,120,0,0" VerticalAlignment="Top" Width="38" Grid.Column="2"/>
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="192.8,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="144.8,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="43"><Run Text="编号"/><Run Text="："/></TextBlock>
         <Button Content="查询" Grid.Column="2" HorizontalAlignment="Left" Margin="337.8,51,0,0" VerticalAlignment="Top" Width="76"/>

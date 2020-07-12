@@ -10,8 +10,8 @@
 
     <Grid>
         
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Width="572" Stretch="Fill"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,123,0,0" VerticalAlignment="Top" Width="38" Grid.Column="2"/>
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Width="572" Stretch="Fill"/>
+        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,123,0,0" VerticalAlignment="Top" Width="38" Grid.Column="2"/>
         <DataGrid x:Name="dgData" 
                       
                        Margin="45,112,44,129.6" HorizontalAlignment="Center" Width="483">

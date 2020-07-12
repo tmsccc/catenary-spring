@@ -47,9 +47,9 @@
         </Grid>
 
 
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Grid.Column="1" Margin="122,26,-0.4,0" Stretch="Fill" Grid.ColumnSpan="2"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="130,117,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131" Grid.ColumnSpan="3"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\签到.jpg" Grid.Column="2" Margin="222.115,126,231.485,201.6" />
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Grid.Column="1" Margin="122,26,-0.4,0" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="130,117,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131" Grid.ColumnSpan="3"/>
+        <Image Source="Resources\签到.jpg" Grid.Column="2" Margin="222.115,126,231.485,201.6" />
         <TextBlock HorizontalAlignment="Left" Height="16.8" Margin="142.33,268.1,0,0" TextWrapping="Wrap" Text="上班打卡：" VerticalAlignment="Top" Width="65.385" RenderTransformOrigin="3.448,-0.929" Grid.Column="2"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Height="16.8" Margin="207.715,268.1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" />
         <TextBlock HorizontalAlignment="Left" Height="16.8" Margin="352.13,268.1,0,0" TextWrapping="Wrap" Text="下班打卡：" VerticalAlignment="Top" Width="65.385" RenderTransformOrigin="3.448,-0.929" Grid.Column="2"/>

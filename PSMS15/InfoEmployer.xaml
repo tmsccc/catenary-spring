@@ -9,8 +9,8 @@
       Title="InfoEmployer">
 
     <Grid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Margin="0,0,0,-0.4" Stretch="Fill"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="6,117,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Margin="0,0,0,-0.4" Stretch="Fill"/>
+        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="6,117,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
         <TextBlock HorizontalAlignment="Left" Height="36" Margin="195,27,0,0" TextWrapping="Wrap" Text="个人信息" VerticalAlignment="Top" Width="153" FontSize="20" TextAlignment="Center"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="263" Margin="47,63,0,0" VerticalAlignment="Top" Width="481"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="263" Margin="42,68,0,0" VerticalAlignment="Top" Width="481">

@@ -9,7 +9,7 @@
       Title="InfoChange">
 
     <Grid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Width="572" Stretch="Fill"/>
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Width="572" Stretch="Fill"/>
         <TextBlock HorizontalAlignment="Left" Height="36" Margin="195,27,0,0" TextWrapping="Wrap" Text="修改信息" VerticalAlignment="Top" Width="153" FontSize="20" TextAlignment="Center"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="235" Margin="42,68,0,0" VerticalAlignment="Top" Width="481">
             <Grid ShowGridLines="false" UseLayoutRounding="True" Margin="1.2,27.2,-1,-27.6" >

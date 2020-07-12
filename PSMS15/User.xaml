@@ -9,8 +9,8 @@
       Title="User">
 
     <Grid>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Width="572" Stretch="Fill"/>
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,180,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
+        <Image Source="Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Width="572" Stretch="Fill"/>
+        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,180,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
         <DataGrid x:Name="dgData" Margin="50.8,144,44.6,168" Grid.Column="2" HorizontalAlignment="Center"  Width="475">
             <!--需要完善,除了序号，基本完善-->
             <DataGrid.Columns>

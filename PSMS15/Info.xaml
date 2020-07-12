@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" Stretch="Fill" Margin="0,10,0,-0.4" Height="384" VerticalAlignment="Top"/>
+        <Image Source="Resources\背景1.jpg" Stretch="Fill" Margin="0,10,0,-0.4" Height="384" VerticalAlignment="Top"/>
         <DataGrid x:Name="dgData" 
                       
                       Margin="48,94,49,148.6" HorizontalAlignment="Center" Width="475">
