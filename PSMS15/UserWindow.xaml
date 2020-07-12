@@ -32,7 +32,7 @@
                 <Button Grid.Row="3" Background="#FFC9D0CF" BorderBrush="#FFFAFAFA" Grid.ColumnSpan="2">
                     <TextBlock Text="员工工资管理" Foreground="White" FontSize="13"/>
                 </Button>
-                <Button Grid.Row="4" Background="#FF68B9B1" BorderBrush="#FFFAFAFA" Grid.ColumnSpan="2" Margin="0,0,0,0">
+                <Button Grid.Row="4" Background="#FF68B9B1" BorderBrush="#FFFAFAFA" Grid.ColumnSpan="2" Margin="0,0,0,0" Click="Button_Click">
                     <TextBlock Text="账号管理" Foreground="White" FontSize="13"/>
                 </Button>
                 <TextBlock HorizontalAlignment="Left" Height="29.7" Margin="35.6,20.002,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49.2" Text="XXX" FontSize="20" RenderTransformOrigin="0.612,0.475"/>

@@ -24,6 +24,21 @@ namespace PSMS15
             InitializeComponent();
         }
 
+        private void dgData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        private void BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
+        {
+        }
+        private void CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+        }
 
     }
 }

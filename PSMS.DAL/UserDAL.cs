@@ -125,7 +125,8 @@ namespace PMSM.DAL
 		}
 
 		//从datable中获取数据，将DataTable中每一行的数据转保存到User的对象中
-		private User DataRowToUser(DataRow dr)
+
+		public User DataRowToUser(DataRow dr)  //private
 		{
 			User user = new User();
 

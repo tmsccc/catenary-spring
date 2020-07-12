@@ -29,6 +29,16 @@ namespace PSMS15
 
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
+        {
+        }
+        private void CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+        }
     }
 
 }

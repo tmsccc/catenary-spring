@@ -23,7 +23,7 @@
                     <RowDefinition Height="25*"/>
                     <RowDefinition Height="150*"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="1" Background="#FF68B9B1" BorderBrush="#FFFAFAFA" Grid.ColumnSpan="2" Margin="0,0,0,0">
+                <Button Background="#FF68B9B1" BorderBrush="#FFFAFAFA" Margin="0,86,-0.4,30" HorizontalAlignment="Left" Grid.RowSpan="3" Width="122" Click="Button_Click">
                     <TextBlock Text="员工信息管理" Foreground="White" FontSize="13"/>
                 </Button>
                 <Button Grid.Row="2" Background="#FFC9D0CF" BorderBrush="#FFFAFAFA" Height="32.532" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
