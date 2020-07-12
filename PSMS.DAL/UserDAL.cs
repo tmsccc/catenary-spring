@@ -19,13 +19,14 @@ namespace PMSM.DAL
 		public int AddUser(User user)
 		{
 			//sql语句
-			String sql = "INSERT INTO t_user(emp_id,emp_name,emp_sex,emp_job,emp_entrytime,emp_emailbox,emp_department,Is_del) VALUES(@emp_id,@emp_name,@emp_sex,@emp_job,@emp_entrytime,@emp_emailbox,@emp_department,@Is_del)";
+			String sql = "INSERT INTO t_user(emp_id,emp_name,emp_sex,emp_job,emp_wages,emp_entrytime,emp_emailbox,emp_department,Is_del) VALUES(@emp_id,@emp_name,@emp_sex,@emp_job,@emp_wages,@emp_entrytime,@emp_emailbox,@emp_department,@Is_del)";
 			//参数列表
 			MySqlParameter[] param = {
 				 new MySqlParameter("@emp_id",MySqlDbType.Int32),
 				 new MySqlParameter("@emp_name",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_sex",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_job",MySqlDbType.VarChar),
+				 new MySqlParameter("@emp_wages",MySqlDbType.Int32),
 				 new MySqlParameter("@emp_entrytime",MySqlDbType.DateTime),
 				 new MySqlParameter("@emp_emailbox",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_department",MySqlDbType.VarChar),
@@ -36,10 +37,11 @@ namespace PMSM.DAL
 			param[1].Value = user.name;
 			param[2].Value = user.sex;
 			param[3].Value = user.job;
-			param[4].Value = user.entrytime;
-			param[5].Value = user.email;
-			param[6].Value = user.department;
-			param[7].Value = user.is_del;
+			param[4].Value = user.wages;
+			param[5].Value = user.entrytime;
+			param[6].Value = user.email;
+			param[7].Value = user.department;
+			param[8].Value = user.is_del;
 
 			return db.ExecuteNonQuery(sql, param);
 
@@ -47,13 +49,14 @@ namespace PMSM.DAL
 		//更新用户信息
 		public int UpdateUser(User user)
 		{
-			String sql = "UPDATE t_user SET emp_name=@emp_name,emp_sex=@emp_sex,emp_job=@emp_job,emp_entrytime=@emp_entrytime,emp_emailbox=@emp_emailbox,emp_department=@emp_department,Is_del=@is_del WHERE emp_id=@emp_id";
+			String sql = "UPDATE t_user SET emp_name=@emp_name,emp_sex=@emp_sex,emp_job=@emp_job,emp_wages=@emp_wages,emp_entrytime=@emp_entrytime,emp_emailbox=@emp_emailbox,emp_department=@emp_department,Is_del=@is_del WHERE emp_id=@emp_id";
 			//参数列表
 			MySqlParameter[] param ={
 			  	 new MySqlParameter("@emp_id",MySqlDbType.Int32),
 				 new MySqlParameter("@emp_name",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_sex",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_job",MySqlDbType.VarChar),
+				 new MySqlParameter("@emp_wages",MySqlDbType.Int32),
 				 new MySqlParameter("@emp_entrytime",MySqlDbType.DateTime),
 				 new MySqlParameter("@emp_emailbox",MySqlDbType.VarChar),
 				 new MySqlParameter("@emp_department",MySqlDbType.VarChar),
@@ -65,10 +68,11 @@ namespace PMSM.DAL
 			param[1].Value = user.name;
 			param[2].Value = user.sex;
 			param[3].Value = user.job;
-			param[4].Value = user.entrytime;
-			param[5].Value = user.email;
-			param[6].Value = user.department;
-			param[7].Value = user.is_del;
+			param[4].Value = user.wages;
+			param[5].Value = user.entrytime;
+			param[6].Value = user.email;
+			param[7].Value = user.department;
+			param[8].Value = user.is_del;
 			return db.ExecuteNonQuery(sql, param);
 		}
 		//软删除，改变Is_del字段的值实现删除，Is_del字段如果为——1，则用户不存在
@@ -129,8 +133,6 @@ namespace PMSM.DAL
 		public User DataRowToUser(DataRow dr)  //private
 		{
 			User user = new User();
-
-			//user.Id = Convert.ToInt32(dr[0]);
 			user.id = Convert.ToInt32(dr["emp_id"]);
 			if (dr["emp_entrytime"] != DBNull.Value)//判断日期非空
 			{
@@ -139,6 +141,7 @@ namespace PMSM.DAL
 			user.name = Convert.ToString(dr["emp_name"]);
 			user.sex = Convert.ToString(dr["emp_sex"]);
 			user.job = Convert.ToString(dr["emp_job"]);
+			user.wages = Convert.ToInt32(dr["emp_wages"]);
 			user.email = Convert.ToString(dr["emp_emailbox"]);
 			user.is_del = Convert.ToInt32(dr["Is_del"]);
 			user.department = Convert.ToString(dr["emp_department"]);
@@ -146,7 +149,7 @@ namespace PMSM.DAL
 		}
 
 		//以下是修改用户表字段的函数，注意Is_del字段修改就是软删除
-		public int UpDateName(int id, String name)   //修改用户姓名，需要用户id
+		public int UpDateName(int id, String name)   //修改员工姓名，需要用户id
 		{
 			String sql = "UPDATE t_user SET emp_name=@emp_name WHERE emp_id=" + id;
 			MySqlParameter[] param ={
@@ -155,7 +158,7 @@ namespace PMSM.DAL
 			param[0].Value = name;
 			return db.ExecuteNonQuery(sql, param);
 		}		
-		public int UpDateSex(int id, String sex) //修改用户性别，需要用户的id
+		public int UpDateSex(int id, String sex) //修改员工性别，需要用户的id
 		{
 			String sql = "UPDATE t_user SET emp_sex=@emp_sex WHERE emp_id=" + id;
 			MySqlParameter[] param ={
@@ -164,7 +167,7 @@ namespace PMSM.DAL
 			param[0].Value = sex;
 			return db.ExecuteNonQuery(sql, param);
 		}		
-		public int UpDateJob(int id, String job)//修改用户工作，需要用户的id
+		public int UpDateJob(int id, String job)//修改员工工作，需要用户的id
 		{
 			String sql = "UPDATE t_user SET emp_job=@emp_job WHERE emp_id=" + id;
 			MySqlParameter[] param ={
@@ -173,7 +176,7 @@ namespace PMSM.DAL
 			param[0].Value = job;
 			return db.ExecuteNonQuery(sql, param);
 		}		
-		public int UpDateEntry(int id, String entry)//修改用户加入公司时间，需要用户的id
+		public int UpDateEntry(int id, String entry)//修改员工加入公司时间，需要用户的id
 		{
 			DateTime dt=DateTime.Parse(entry);
 			String sql = "UPDATE t_user SET emp_entrytime=@emp_entrytime WHERE emp_id=" + id;
@@ -183,7 +186,7 @@ namespace PMSM.DAL
 			param[0].Value = dt;
 			return db.ExecuteNonQuery(sql, param);
 		}		
-		public int UpDateEmail(int id, String email)//修改用户邮箱，需要用户的id
+		public int UpDateEmail(int id, String email)//修改员工邮箱，需要用户的id
 		{
 			String sql = "UPDATE t_user SET emp_emailbox=@emp_emailbox WHERE emp_id=" + id;
 			MySqlParameter[] param ={
@@ -192,13 +195,22 @@ namespace PMSM.DAL
 			param[0].Value = email;
 			return db.ExecuteNonQuery(sql, param);
 		}
-		public int UpDateDepartment(int id, String department)//修改用户部门，需要用户的id
+		public int UpDateDepartment(int id, String department)//修改员工部门，需要用户的id
 		{
 			String sql = "UPDATE t_user SET emp_department=@emp_department WHERE emp_id=" + id;
 			MySqlParameter[] param ={
 							   new MySqlParameter("@emp_department",MySqlDbType.VarChar),
 			};
 			param[0].Value = department;
+			return db.ExecuteNonQuery(sql, param);
+	    }			
+		 public int UpDateWages(int id, int wages)//修改员工基本工资，需要用户的id
+		{
+			String sql = "UPDATE t_user SET emp_wages=@emp_wages WHERE emp_id=" + id;
+			MySqlParameter[] param ={
+							   new MySqlParameter("@emp_wages",MySqlDbType.VarChar),
+			};
+			param[0].Value = wages;
 			return db.ExecuteNonQuery(sql, param);
 	    }	
 	}
