@@ -24,5 +24,23 @@ namespace PSMS15
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            InfoChange page1 = new InfoChange();
+            Content = new Frame()
+            {
+                Content = page1
+            };
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            InfoAdd page1 = new InfoAdd();
+            Content = new Frame()
+            {
+                Content = page1
+            };
+        }
     }
 }

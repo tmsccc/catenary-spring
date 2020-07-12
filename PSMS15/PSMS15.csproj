@@ -57,12 +57,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddUser.xaml.cs">
+      <DependentUpon>AddUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Checkin.xaml.cs">
       <DependentUpon>Checkin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckinChange.xaml.cs">
+      <DependentUpon>CheckinChange.xaml</DependentUpon>
     </Compile>
     <Compile Include="CheckinEmployer.xaml.cs">
       <DependentUpon>CheckinEmployer.xaml</DependentUpon>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="Info.xaml.cs">
       <DependentUpon>Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAdd.xaml.cs">
+      <DependentUpon>InfoAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoChange.xaml.cs">
+      <DependentUpon>InfoChange.xaml</DependentUpon>
     </Compile>
     <Compile Include="InfoEmployer.xaml.cs">
       <DependentUpon>InfoEmployer.xaml</DependentUpon>
@@ -138,9 +150,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Checkin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CheckinChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CheckinEmployer.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +173,14 @@
     <Page Include="Info.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InfoAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="InfoEmployer.xaml">
       <Generator>MSBuild:Compile</Generator>

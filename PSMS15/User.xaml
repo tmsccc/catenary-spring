@@ -15,28 +15,20 @@
             <!--需要完善,除了序号，基本完善-->
             <DataGrid.Columns>
 
-                <DataGridTemplateColumn Header="编号" Width="30*" MinWidth="10" IsReadOnly="True">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Header, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}, Mode=FindAncestor}}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
+                <DataGridTextColumn Binding="{Binding Name}" Header="编号" Width="30*" MinWidth="10" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="50*" Header="姓名" IsReadOnly="False"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="60*" Header="账号" IsReadOnly="False"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="60*" Header="密码" IsReadOnly="False"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="115.8,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="67.8,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="43"><Run Text="编号"/><Run Text="："/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="18" Margin="120,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
+        <TextBlock HorizontalAlignment="Left" Margin="72,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="43"><Run Text="编号"/><Run Text="："/></TextBlock>
 
-        <Button Content="删除" Grid.Column="2" HorizontalAlignment="Left" Margin="430.8,76,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button Content="删除" HorizontalAlignment="Left" Margin="438,80,0,0" VerticalAlignment="Top" Width="70"/>
         <TextBlock HorizontalAlignment="Left" Margin="120,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="70" FontSize="13"><Run Text="修改密码"/><Run Text="："/></TextBlock>
         <TextBox HorizontalAlignment="Left" Height="19" Margin="189,290,0,0" TextWrapping="Wrap" Text="534068" VerticalAlignment="Top" Width="86" FontSize="13"/>
-        <Button Content="查询" Grid.Column="2" HorizontalAlignment="Left" Margin="232.8,76,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="233,81,0,0" VerticalAlignment="Top" Width="70"/>
         <Button Content="修改完成" HorizontalAlignment="Left" Margin="369,288,0,0" VerticalAlignment="Top" Width="66" Height="23" RenderTransformOrigin="0.433,1.678"/>
-        <Button Content="添加" HorizontalAlignment="Left" Margin="337,76,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="1.796,-8.769"/>
+        <Button Content="添加" HorizontalAlignment="Left" Margin="338,81,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="1.796,-8.769" Click="Button_Click"/>
     </Grid>
 </Page>

@@ -17,17 +17,8 @@
             <!--需要完善,除了序号，基本完善-->
             <DataGrid.Columns>
 
-                <DataGridTemplateColumn Header="编号" Width="40*" MinWidth="10" IsReadOnly="True">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Header, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}, Mode=FindAncestor}}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
+                <DataGridTextColumn Binding="{Binding Name}" Header="编号" Width="40*" MinWidth="10" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="60*" Header="姓名" IsReadOnly="False"/>
-
                 <DataGridTextColumn Binding="{Binding Name}" Width="60*" Header="底薪" IsReadOnly="False"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="60*" Header="奖金" IsReadOnly="False"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="60*" Header="罚金" IsReadOnly="False"/>

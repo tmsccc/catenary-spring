@@ -54,16 +54,7 @@
                       Margin="49.8,114,45.6,135" Grid.Column="2" HorizontalAlignment="Center" Width="475">
             <!--需要完善,除了序号，基本完善-->
             <DataGrid.Columns>
-
-                <DataGridTemplateColumn Header="编号" Width="40*" MinWidth="10" IsReadOnly="True">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Header, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}, Mode=FindAncestor}}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
+                <DataGridTextColumn Binding="{Binding Name}" Header="编号" Width="40*" MinWidth="10" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="50*" Header="姓名" IsReadOnly="False"/>
 
                 <DataGridTextColumn Binding="{Binding Name}" Width="40*" Header="性别" IsReadOnly="False"/>
@@ -77,7 +68,8 @@
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="192.8,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="144.8,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="43"><Run Text="编号"/><Run Text="："/></TextBlock>
         <Button Content="查询" Grid.Column="2" HorizontalAlignment="Left" Margin="337.8,51,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button Content="编辑完成" Grid.Column="2" HorizontalAlignment="Left" Margin="426.8,318,0,0" VerticalAlignment="Top" Width="63" Height="23"/>
+        <Button Content="修改" Grid.Column="2" HorizontalAlignment="Left" Margin="150,318,0,0" VerticalAlignment="Top" Width="63" Height="23" Click="Button_Click_4"/>
+        <Button Content="增加" Grid.Column="2" HorizontalAlignment="Left" Margin="350,318,0,0" VerticalAlignment="Top" Width="63" Height="23" Click="Button_Click_5"/>
         <ContentControl x:Name="Page_Change" Grid.Column="1" HorizontalAlignment="Left" Margin="122,26,-4.4,0" VerticalAlignment="Top" Height="394" Width="576" Grid.ColumnSpan="2">
 
         </ContentControl>

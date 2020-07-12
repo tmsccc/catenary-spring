@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace PSMS15
 {
     /// <summary>
-    /// Checkin.xaml 的交互逻辑
+    /// AddUser.xaml 的交互逻辑
     /// </summary>
-    public partial class Checkin : Page
+    public partial class AddUser : Page
     {
-        public Checkin()
+        public AddUser()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CheckinChange page1 = new CheckinChange();
+            User page1 = new User();
             Content = new Frame()
             {
                 Content = page1

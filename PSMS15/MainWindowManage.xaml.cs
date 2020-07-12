@@ -59,5 +59,23 @@ namespace PSMS15
                 Content = page1
             };
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            InfoChange page1 = new InfoChange();
+            Page_Change.Content = new Frame()
+            {
+                Content = page1
+            };
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            InfoAdd page1 = new InfoAdd();
+            Page_Change.Content = new Frame()
+            {
+                Content = page1
+            };
+        }
     }
 }

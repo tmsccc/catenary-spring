@@ -16,16 +16,7 @@
                       Margin="48,94,49,148.6" HorizontalAlignment="Center" Width="475">
             <!--需要完善,除了序号，基本完善-->
             <DataGrid.Columns>
-
-                <DataGridTemplateColumn Header="编号" Width="40*" MinWidth="10" IsReadOnly="True">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Header, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}, Mode=FindAncestor}}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
+                <DataGridTextColumn Binding="{Binding Name}" Header="编号" Width="40*" MinWidth="10" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Name}" Width="50*" Header="姓名" IsReadOnly="False"/>
 
                 <DataGridTextColumn Binding="{Binding Name}" Width="40*" Header="性别" IsReadOnly="False"/>
@@ -38,7 +29,8 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="193,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
         <TextBlock HorizontalAlignment="Left" Margin="145,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="43"><Run Text="编号"/><Run Text="："/></TextBlock>
         <Button Content="查询" HorizontalAlignment="Left" Margin="338,41,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button Content="编辑完成" HorizontalAlignment="Left" Margin="424,292,0,0" VerticalAlignment="Top" Width="63" Height="24"/>
+        <Button Content="增加" HorizontalAlignment="Left" Margin="338,292,0,0" VerticalAlignment="Top" Width="63" Height="24" Click="Button_Click_1"/>
+        <Button Content="修改" HorizontalAlignment="Left" Margin="163,292,0,0" VerticalAlignment="Top" Width="63" Height="24" Click="Button_Click"/>
         <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,100,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
     </Grid>
 </Page>
