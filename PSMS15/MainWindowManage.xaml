@@ -48,30 +48,13 @@
             <TextBlock HorizontalAlignment="Left" Margin="10,4,0,-4.2" TextWrapping="Wrap" Width="150" Height="26" VerticalAlignment="Top" Foreground="#FFF3F3F3" FontSize="13" TextAlignment="Center"><Run Background="Black" Text="人事管理系统--管理员"/></TextBlock>
         </Grid>
         <Image Source="Resources\背景1.jpg" HorizontalAlignment="Right" Margin="0,26,-0.4,0" Width="571" Grid.Column="1" Stretch="None" Grid.ColumnSpan="2"/>
-
-        <DataGrid x:Name="dgData" 
-                      
-                      Margin="49.8,114,45.6,135" Grid.Column="2" HorizontalAlignment="Center" Width="475">
- 
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}" Header="编号" Width="40*" MinWidth="10" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding Name}" Width="50*" Header="姓名" IsReadOnly="False"/>
-
-                <DataGridTextColumn Binding="{Binding Name}" Width="40*" Header="性别" IsReadOnly="False"/>
-                <DataGridTextColumn Binding="{Binding Name}" Width="60*" Header="部门" IsReadOnly="False"/>
-                <DataGridTextColumn Binding="{Binding Name}" Width="80*" Header="工作岗位" IsReadOnly="False"/>
-                <DataGridTextColumn Binding="{Binding Name}" Width="80*" Header="入职时间" IsReadOnly="False"/>
-                <DataGridTextColumn Binding="{Binding Name}" Width="100*" Header="电子邮箱" IsReadOnly="False"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Image Source="Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="0,120,0,0" VerticalAlignment="Top" Width="38" Grid.Column="2"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="192.8,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="144.8,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="43"><Run Text="编号"/><Run Text="："/></TextBlock>
-        <Button Content="查询" Grid.Column="2" HorizontalAlignment="Left" Margin="337.8,51,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button Content="修改" Grid.Column="2" HorizontalAlignment="Left" Margin="150,318,0,0" VerticalAlignment="Top" Width="63" Height="23" Click="Button_Click_4"/>
-        <Button Content="增加" Grid.Column="2" HorizontalAlignment="Left" Margin="350,318,0,0" VerticalAlignment="Top" Width="63" Height="23" Click="Button_Click_5"/>
+        <Image Source="Resources\头像.jpg" HorizontalAlignment="Left" Height="100" Margin="229.8,91,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBlock Text="XXX" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,215,306.6,163" Width="64" RenderTransformOrigin="2.71,0.526" Grid.Column="2" FontSize="30" Height="42"><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock Text=", 您好！" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="268.8,214,198.6,163" Grid.Column="2" FontSize="30" Height="43" Width="103"/>
         <ContentControl x:Name="Page_Change" Grid.Column="1" HorizontalAlignment="Left" Margin="122,26,-4.4,0" VerticalAlignment="Top" Height="394" Width="576" Grid.ColumnSpan="2">
 
+
         </ContentControl>
+        
     </Grid>
 </Window>

@@ -27,7 +27,7 @@ namespace PSMS15
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            User page1 = new User();
+            UserManage page1 = new UserManage();
             Content = new Frame()
             {
                 Content = page1

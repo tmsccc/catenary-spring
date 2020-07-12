@@ -18,9 +18,9 @@ namespace PSMS15
     /// <summary>
     /// User.xaml 的交互逻辑
     /// </summary>
-    public partial class User : Page
+    public partial class UserManage : Page
     {
-        public User()
+        public UserManage()
         {
             InitializeComponent();
         }
