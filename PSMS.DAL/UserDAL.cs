@@ -14,7 +14,8 @@ namespace PMSM.DAL
 	public class UserDAL
 	{
 		SqlDbHelper db = new SqlDbHelper();
-		//添加员工信息，这里传入的user.id要和账号信息里的user_id对应，不然就不能根据账号信息查找到对应用户信息
+		/*添加员工信息，这里传入的user.id要和账号信息里的user_id对应，不然就不能根据账号信息查找到对应用户信息，这里注意这里的通过带参构造函数初始化User对象时会产生日期字段字符格式不符，
+		用DateTime dt=DateTime.Parse("日期");即可*/
 		public int AddUser(User user)
 		{
 			//sql语句
@@ -144,6 +145,61 @@ namespace PMSM.DAL
 			return user;
 		}
 
-
+		//以下是修改用户表字段的函数，注意Is_del字段修改就是软删除
+		public int UpDateName(int id, String name)   //修改用户姓名，需要用户id
+		{
+			String sql = "UPDATE t_user SET emp_name=@emp_name WHERE emp_id=" + id;
+			MySqlParameter[] param ={
+							   new MySqlParameter("@emp_name",MySqlDbType.VarChar),
+			};
+			param[0].Value = name;
+			return db.ExecuteNonQuery(sql, param);
+		}		
+		public int UpDateSex(int id, String sex) //修改用户性别，需要用户的id
+		{
+			String sql = "UPDATE t_user SET emp_sex=@emp_sex WHERE emp_id=" + id;
+			MySqlParameter[] param ={
+							   new MySqlParameter("@emp_sex",MySqlDbType.VarChar),
+			};
+			param[0].Value = sex;
+			return db.ExecuteNonQuery(sql, param);
+		}		
+		public int UpDateJob(int id, String job)//修改用户工作，需要用户的id
+		{
+			String sql = "UPDATE t_user SET emp_job=@emp_job WHERE emp_id=" + id;
+			MySqlParameter[] param ={
+							   new MySqlParameter("@emp_job",MySqlDbType.VarChar),
+			};
+			param[0].Value = job;
+			return db.ExecuteNonQuery(sql, param);
+		}		
+		public int UpDateEntry(int id, String entry)//修改用户加入公司时间，需要用户的id
+		{
+			DateTime dt=DateTime.Parse(entry);
+			String sql = "UPDATE t_user SET emp_entrytime=@emp_entrytime WHERE emp_id=" + id;
+			MySqlParameter[] param ={
+							   new MySqlParameter("@emp_entrytime",MySqlDbType.DateTime),
+			};
+			param[0].Value = dt;
+			return db.ExecuteNonQuery(sql, param);
+		}		
+		public int UpDateEmail(int id, String email)//修改用户邮箱，需要用户的id
+		{
+			String sql = "UPDATE t_user SET emp_emailbox=@emp_emailbox WHERE emp_id=" + id;
+			MySqlParameter[] param ={
+							   new MySqlParameter("@emp_emailbox",MySqlDbType.VarChar),
+			};
+			param[0].Value = email;
+			return db.ExecuteNonQuery(sql, param);
+		}
+		public int UpDateDepartment(int id, String department)//修改用户部门，需要用户的id
+		{
+			String sql = "UPDATE t_user SET emp_department=@emp_department WHERE emp_id=" + id;
+			MySqlParameter[] param ={
+							   new MySqlParameter("@emp_department",MySqlDbType.VarChar),
+			};
+			param[0].Value = department;
+			return db.ExecuteNonQuery(sql, param);
+	    }	
 	}
 }
