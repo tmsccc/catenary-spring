@@ -127,5 +127,16 @@ namespace PSMS.DAL
             account.password = Convert.ToString(dr["user_password"]);
             return account;
         }
+        //以下是更新各字段的函数，注意密码修改是前面的UpDatePwd函数，Is_del字段修改就是软删除函数
+        public int UpDateAccount(int id, int account)   //修改账号信息
+        {
+            String sql = "UPDATE t_account SET user_account=@user_account WHERE user_id=" +id;
+            MySqlParameter[] param ={
+                               new MySqlParameter("@user_account",MySqlDbType.Int32),
+            };
+            param[0].Value = account;
+            return db.ExecuteNonQuery(sql, param);
+        }
+
     }
 }

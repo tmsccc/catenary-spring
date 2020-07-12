@@ -26,7 +26,7 @@ namespace PSMS.DAL.Tests
 		public void SoftDeleteTest()
 		{
 			Account acco = new Account();
-			acco = account.GetAccountById(1);
+			acco = account.GetAccountById(3);
 			Assert.IsNotNull(acco);
 			//Assert.Fail();
 		}
@@ -35,7 +35,7 @@ namespace PSMS.DAL.Tests
 		public void GetUserByLoginNameAndPasswordTest()
 		{
 			Account a = new Account();
-			a = account.GetUserByLoginNameAndPassword(1003, "sada");
+			a = account.GetUserByLoginNameAndPassword(1003, "dha2");
 			Assert.IsNotNull(a);
 			//Assert.Fail();
 		}
@@ -74,8 +74,15 @@ namespace PSMS.DAL.Tests
 		public void GetAllAccountTest()
 		{
 			List<Account> a = new List<Account>();
-			a =account.GetAllAccount();
+			a = account.GetAllAccount();
 			Assert.IsNotNull(a);
+		}
+
+		[TestMethod()]
+		public void UpDateAccountTest()
+		{
+			account.UpDateAccount(3, 1004);
+			//Assert.Fail();
 		}
 	}
 }

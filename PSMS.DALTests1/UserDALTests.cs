@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using PMSM.DAL;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PSMS.Model;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace PMSM.DAL.Tests
 
 		public void GetUserByIdTest()
 		{
-			User user = userdal.GetUserById(1000);
+			User user = userdal.GetUserById(1009);
 			Assert.IsNotNull(user);
 			//Assert.Fail();
 		}
@@ -22,7 +23,7 @@ namespace PMSM.DAL.Tests
 		[TestMethod()]
 		public void AddUserTest()
 		{
-			User user = new User(1002, "dsj", "sfdfsd", "sdfs", DateTime.Parse("2000-07-18"), "dscsz", "hklsa", 0);
+			User user = new User(1009, "dsj", "sfdfsd", "sdfs", DateTime.Parse("2000-07-18"), "dscsz", "hklsa", 0);
 			userdal.AddUser(user);
 			Assert.IsNotNull(user);
 			//Assert.Fail();
@@ -66,6 +67,48 @@ namespace PMSM.DAL.Tests
 			DataTable dt = new DataTable();
 			dt = userdal.GetAllUsers();
 			Assert.IsNotNull(dt);
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpDateNameTest()
+		{
+			userdal.UpDateName(1002, "adda");
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpDateSexTest()
+		{
+			userdal.UpDateSex(1002, "nv");
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpDateJobTest()
+		{
+			userdal.UpDateJob(1002, "hjk");
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpDateEntryTest()
+		{
+			userdal.UpDateEntry(1002,"2010-07-19");
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpDateEmailTest()
+		{
+			userdal.UpDateEmail(1002, "dsjfsx@");
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpDateDepartmentTest()
+		{
+			userdal.UpDateDepartment(1002, "dsjdsdsa");
 			//Assert.Fail();
 		}
 	}
