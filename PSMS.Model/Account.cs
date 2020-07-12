@@ -18,7 +18,7 @@ namespace PSMS.Model
 		public Account(int id, int account, String password,int is_del)
 		{
 			this.id = id;
-			this.ac_number = account;
+			ac_number = account;
 			this.password = password;
 			this.is_del = is_del;
 		}

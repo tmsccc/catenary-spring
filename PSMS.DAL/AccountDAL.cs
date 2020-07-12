@@ -14,26 +14,23 @@ namespace PSMS.DAL
    public class AccountDAL
     {
         SqlDbHelper db = new SqlDbHelper();
-        UserDAL userdal = new UserDAL();
          //用户注册账号，需要传入密码和账号，用户Id会自己生成
         public int AddAccount(int number,String password)
         {
             //sql语句
-            String sql = "INSERT INTO t_account(user_id,user_account,user_password,Is_del) VALUES(@user_id,@user_account,@user_password,@is_del)";
+            String sql = "INSERT INTO t_account(user_id,user_account,user_password,Is_del) VALUES(NULL,@user_account,@user_password,@is_del)";
             //参数列表
-            MySqlParameter[] param = {
-                                       new MySqlParameter("@user_id",SqlDbType.Int),
-                                       new MySqlParameter("@user_account",SqlDbType.Int),
-                                       new MySqlParameter("@user_password",SqlDbType.VarChar),
-                                       new MySqlParameter("@is_del",SqlDbType.Int),
+            MySqlParameter[] param = {         
+                                       new MySqlParameter("@user_account",MySqlDbType.Int32),
+                                       new MySqlParameter("@user_password",MySqlDbType.VarChar),
+                                       new MySqlParameter("@Is_del",MySqlDbType.Int32),
                                      
                                    };
 
             //参数赋值
-            param[0].Value = 3;
-            param[1].Value = number;
-            param[2].Value = password;
-            param[3].Value = 0;
+            param[0].Value = number;
+            param[1].Value = password;
+            param[2].Value = 0;
             return db.ExecuteNonQuery(sql, param);
         }
         //实现登陆,只返回Account的对象，如果数据库中没有与输入的账号密码匹配，则返回为空
@@ -42,9 +39,8 @@ namespace PSMS.DAL
     
             string sql = "SELECT * FROM t_account WHERE user_account=@user_account AND user_password=@user_password AND Is_del=0";
             MySqlParameter[] @params = {
-                                        new MySqlParameter("@name",MySqlDbType.VarChar),
-                                        new MySqlParameter("@password",MySqlDbType.VarChar),
-                                        new MySqlParameter("@Is_del",MySqlDbType.VarChar),
+                                        new MySqlParameter("@user_account",MySqlDbType.VarChar),
+                                        new MySqlParameter("@user_password",MySqlDbType.VarChar),                     
                                    };
             @params[0].Value = number;
             @params[1].Value = password;
@@ -63,15 +59,15 @@ namespace PSMS.DAL
         public int UpdatePwd(Account account, string newPwd)
         {
             //1 sql语句
-            string sql = "UPDATE t_account SET password=@newPwd WHERE id=@id AND password=@oldPwd";
+            string sql = "UPDATE t_account SET user_password=@newPwd WHERE user_id=@id AND user_password=@oldPwd";
             MySqlParameter[] param = {
+                new MySqlParameter("@newPwd",MySqlDbType.VarChar),
                 new MySqlParameter("@id",MySqlDbType.Int32),
-                new MySqlParameter("@oldPwd",MySqlDbType.Int32),
-                new MySqlParameter("@newPwd",MySqlDbType.VarChar)
+                new MySqlParameter("@oldPwd",MySqlDbType.VarChar)
             };
-            param[0].Value = account.id;
-            param[1].Value = account;
-            param[2].Value = newPwd;
+            param[0].Value = newPwd;
+            param[1].Value = account.id;
+            param[2].Value = account.password;
             return db.ExecuteNonQuery(sql, param);
         }
         //软删除，改变Is_del的值
@@ -84,7 +80,7 @@ namespace PSMS.DAL
         //使用SQL语句直接删除由id指定的用户数据
         public int RealDelete(int id)
         {
-            string sql = "DELETE FROM t_account WHERE No =" + id;
+            string sql = "DELETE FROM t_account WHERE user_id =" + id;
 
             return db.ExecuteNonQuery(sql);
         }

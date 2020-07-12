@@ -16,18 +16,66 @@ namespace PSMS.DAL.Tests
 		[TestMethod()]
 		public void AddAccountTest()
 		{
-			String sql = "fasf1fsf2";
-			account.AddAccount(18, sql);
+			String sql = "'fasf1fsf2'";
+			int t = 18;
+			account.AddAccount(t, sql);
 			//Assert.Fail();
 		}
 
 		[TestMethod()]
 		public void SoftDeleteTest()
 		{
-			Account acco= new Account();
-				acco=account.GetAccountById(1);
+			Account acco = new Account();
+			acco = account.GetAccountById(1);
 			Assert.IsNotNull(acco);
 			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void GetUserByLoginNameAndPasswordTest()
+		{
+			Account a = new Account();
+			a = account.GetUserByLoginNameAndPassword(1003, "sada");
+			Assert.IsNotNull(a);
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void UpdatePwdTest()
+		{
+			Account a = new Account(2, 1003, "sada", 0);
+			account.UpdatePwd(a, "dha2");
+
+		}
+
+		[TestMethod()]
+		public void SoftDeleteTest1()
+		{
+			account.SoftDelete(1);
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void RealDeleteTest()
+		{
+			account.RealDelete(1);
+			//Assert.Fail();
+		}
+
+		[TestMethod()]
+		public void GetAccountByIdTest()
+		{
+			Account a = new Account();
+			a = account.GetAccountById(2);
+			Assert.IsNotNull(a);
+		}
+
+		[TestMethod()]
+		public void GetAllAccountTest()
+		{
+			List<Account> a = new List<Account>();
+			a =account.GetAllAccount();
+			Assert.IsNotNull(a);
 		}
 	}
 }
