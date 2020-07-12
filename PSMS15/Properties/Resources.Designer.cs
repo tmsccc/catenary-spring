@@ -63,9 +63,9 @@ namespace PSMS15.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap login {
+        internal static System.Drawing.Bitmap 签到 {
             get {
-                object obj = ResourceManager.GetObject("login", resourceCulture);
+                object obj = ResourceManager.GetObject("签到", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,39 @@ namespace PSMS15.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 签到 {
+        internal static System.Drawing.Bitmap 箭头 {
             get {
-                object obj = ResourceManager.GetObject("签到", resourceCulture);
+                object obj = ResourceManager.GetObject("箭头", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 背景 {
+            get {
+                object obj = ResourceManager.GetObject("背景", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 背景1 {
+            get {
+                object obj = ResourceManager.GetObject("背景1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 背景3 {
+            get {
+                object obj = ResourceManager.GetObject("背景3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

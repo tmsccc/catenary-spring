@@ -1,0 +1,29 @@
+﻿<Window x:Class="PSMS15.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSMS15"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="600" WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
+    <Grid>
+        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\login1.jpg" Stretch="Fill"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="291" Margin="175.05,70.6,0,0" Stroke="#FF090909" VerticalAlignment="Top" Width="228" StrokeThickness="0"/>
+        <Rectangle Fill="#FF68B9B1" HorizontalAlignment="Left" Height="32" Margin="155.05,99.6,0,0" Stroke="#FF68B9B1" VerticalAlignment="Top" Width="230"/>
+        <TextBlock HorizontalAlignment="Left" Height="24.22" Margin="189.05,107.38,0,0" TextWrapping="Wrap" Text="人事管理系统登录" VerticalAlignment="Top" Width="153" Foreground="#FFFAFAFA" TextAlignment="Center"/>
+        <Path Data="M155.05,131.6 L175.05,142.6" HorizontalAlignment="Left" Height="11" Margin="155.05,131.6,0,0" Stretch="Fill" VerticalAlignment="Top" Width="20" OpacityMask="Black" Stroke="#FF919A99"/>
+        <TextBlock Height="17" Margin="205.05,158.7,0,0" TextWrapping="Wrap" Text="用户名" Width="38" FontSize="10" Foreground="#FF889096" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock Height="17" Margin="205.05,210.7,0,0" TextWrapping="Wrap" Text="密码" Width="38" FontSize="10" Foreground="#FF889096" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="205.05,175.7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <PasswordBox HorizontalAlignment="Left" Height="27" Margin="205.05,227.6,0,0" VerticalAlignment="Top" Width="161"/>
+        <Button HorizontalAlignment="Left" Height="27" Margin="205.05,301.8,0,0" VerticalAlignment="Top" Width="161" Background="#FF68B9B1" MouseLeftButtonDown="Button_MouseLeftButtonDown">
+            <TextBlock Text="登录" Foreground="White"/>
+        </Button>
+        <RadioButton HorizontalAlignment="Left" Margin="217.05,271.8,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.124,0.632" FontSize="10">
+            <TextBlock Text="管理员" Foreground="#FF889096" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+        </RadioButton>
+        <RadioButton HorizontalAlignment="Left" Height="14.24" Margin="303.25,271.8,0,0" VerticalAlignment="Top" Width="54.8" RenderTransformOrigin="0.5,0.5" FontSize="10" MouseLeftButtonDown="RadioButton_MouseLeftButtonDown">
+            <TextBlock Text="员工" Foreground="#FF889096"/>
+        </RadioButton>
+    </Grid>
+</Window>
