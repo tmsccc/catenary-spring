@@ -8,16 +8,9 @@ namespace PSMS.Model
 {
 	public class Attendance //考勤信息类
 	{
-		int id { set; get; }//员工编号
-		int late_day { set; get; }//迟到次数
-		int leave_day { set; get; }//请假次数
-		int absent_day { set; get; }//旷工次数
-		int is_sign { set; get; }//签到状况，0—未签到；1—按时签到，2—过时签到
-		int clockin_day { set; get; }//迟到次数
-									 //无参构造函数
 		public Attendance() { }
 		//带参构造函数
-		public Attendance(int id, int clockin_day, int late_day, int leave_day, int absent_day, int is_sign)
+		public Attendance(int id, int clockin_day, int late_day, int leave_day, int absent_day, int is_sign, int is_del)
 		{
 			this.id = id;
 			this.is_sign = is_sign;
@@ -26,7 +19,17 @@ namespace PSMS.Model
 			this.leave_day = leave_day;
 			this.clockin_day = clockin_day;
 
-
+			this.is_del = is_del;
 		}
+		public int id { set; get; }//员工编号
+		public int late_day { set; get; }//迟到次数
+		public int leave_day { set; get; }//请假次数
+		public int absent_day { set; get; }//旷工次数
+		public int is_sign { set; get; }//签到状况，0—未签到；1—按时签到，2—过时签到
+		public int clockin_day { set; get; }//打卡天数
+		public int is_del { set; get; } //考勤信息是否删除
+								 //无参构造函数
+
+
 	}
 }

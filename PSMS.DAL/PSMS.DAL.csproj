@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountDAL.cs" />
-    <Compile Include="CheckWork.DAL.cs" />
+    <Compile Include="AttendanceDAL.cs" />
     <Compile Include="SQLHelper.cs" />
     <Compile Include="UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
