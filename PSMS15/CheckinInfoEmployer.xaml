@@ -1,0 +1,46 @@
+﻿<Page x:Class="PSMS15.CheckinInfoEmployer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PSMS15"
+      mc:Ignorable="d" 
+      d:DesignHeight="394" d:DesignWidth="572"
+      Title="CheckinInfoEmployer">
+
+    <Grid>
+        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\背景1.jpg" HorizontalAlignment="Left" Width="572" Margin="0,0,0,-0.4" Stretch="Fill"/>
+        <Image Source="C:\Users\Art\Source\Repos\psms-15\PSMS15\Resources\箭头.jpg" HorizontalAlignment="Left" Height="17" Margin="6,150,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.468,1.131"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Height="36" Margin="194.887,64.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" FontSize="20" TextAlignment="Center"><Run Text="当月"/><Run Text="考勤"/><Run Text="情况"/></TextBlock>
+        <Rectangle Grid.Column="2" Fill="#FF68B9B1" HorizontalAlignment="Left" Height="2" Margin="73.8,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="412"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="180" Margin="73.8,129,0,0" VerticalAlignment="Top" Width="412">
+
+            <Grid ShowGridLines="false" UseLayoutRounding="True" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="41*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="打卡天数：" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Text="请假天数：" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Text="今日是否签到：" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Text="迟到天数：" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Text="旷工天数：" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Text="XXX" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="XXX" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="XXX" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="XXX" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="XXX" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
