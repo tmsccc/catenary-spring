@@ -14,7 +14,7 @@ namespace PMSM.DAL
 	public class UserDAL
 	{
 		SqlDbHelper db = new SqlDbHelper();
-		//添加员工信息
+		//添加员工信息，这里传入的user.id要和账号信息里的user_id对应，不然就不能根据账号信息查找到对应用户信息
 		public int AddUser(User user)
 		{
 			//sql语句
@@ -89,8 +89,7 @@ namespace PMSM.DAL
 			DataTable dt = db.ExecuteDataTable(sql);
 			List<User> users = new List<User>();
 			foreach (DataRow dr in dt.Rows)
-			{
-				//行转化成对象
+			{ 
 				User user = DataRowToUser(dr);
 				users.Add(user);
 			}
