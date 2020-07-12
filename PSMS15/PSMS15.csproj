@@ -57,73 +57,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CheckinWindow.xaml.cs">
-      <DependentUpon>CheckinWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CheckinWindowEmployer.xaml.cs">
-      <DependentUpon>CheckinWindowEmployer.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="InfoWindow.xaml.cs">
-      <DependentUpon>InfoWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LoginWindowEmployer.xaml.cs">
-      <DependentUpon>LoginWindowEmployer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="InfoWindowEmployer.xaml.cs">
-      <DependentUpon>InfoWindowEmployer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CheckinInfoWindowEmployer.xaml.cs">
-      <DependentUpon>CheckinInfoWindowEmployer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SalaryWindow.xaml.cs">
-      <DependentUpon>SalaryWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SalaryWindowEmployer.xaml.cs">
-      <DependentUpon>SalaryWindowEmployer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserWindow.xaml.cs">
-      <DependentUpon>UserWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="CheckinWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CheckinWindowEmployer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="InfoWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LoginWindowEmployer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="InfoWindowEmployer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CheckinInfoWindowEmployer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SalaryWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SalaryWindowEmployer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
