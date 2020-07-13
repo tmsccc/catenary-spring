@@ -103,8 +103,8 @@
     <Compile Include="SalaryEmployer.xaml.cs">
       <DependentUpon>SalaryEmployer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User.xaml.cs">
-      <DependentUpon>User.xaml</DependentUpon>
+    <Compile Include="UserManage.xaml.cs">
+      <DependentUpon>UserManage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +210,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="User.xaml">
+    <Page Include="UserManage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -226,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\箭头.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\头像.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

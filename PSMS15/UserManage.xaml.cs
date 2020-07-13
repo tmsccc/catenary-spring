@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace PSMS15
 {
     /// <summary>
-    /// UserAccount.xaml 的交互逻辑
+    /// User.xaml 的交互逻辑
     /// </summary>
-    public partial class UserAccount : Page
+    public partial class UserManage : Page
     {
-        public UserAccount()
+        public UserManage()
         {
             InitializeComponent();
         }

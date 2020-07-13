@@ -22,7 +22,6 @@ namespace PSMS15
         public MainWindowManage()
         {
             InitializeComponent();
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -54,29 +53,12 @@ namespace PSMS15
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            UserAccount page1 = new UserAccount();
+            UserManage page1 = new UserManage();
             Page_Change.Content = new Frame()
             {
                 Content = page1
             };
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            InfoChange page1 = new InfoChange();
-            Page_Change.Content = new Frame()
-            {
-                Content = page1
-            };
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            InfoAdd page1 = new InfoAdd();
-            Page_Change.Content = new Frame()
-            {
-                Content = page1
-            };
-        }
     }
 }

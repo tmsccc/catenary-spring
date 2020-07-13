@@ -34,7 +34,7 @@ namespace PSMS.DAL
             return db.ExecuteNonQuery(sql, param);
         }
         //实现登陆,只返回Account的对象，如果数据库中没有与输入的账号密码匹配，则返回为空
-        public Account GetUserByLoginNameAndPassword( int number, string password)//number--用户账号，//password--用户密码//isdel=0--用户存在，isdel=1用户不存在
+        public Account GetUserByLoginNameAndPassword( int number, String password)//number--用户账号，//password--用户密码//isdel=0--用户存在，isdel=1用户不存在
         {
     
             string sql = "SELECT * FROM t_account WHERE user_account=@user_account AND user_password=@user_password AND Is_del=0";

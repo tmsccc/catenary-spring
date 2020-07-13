@@ -12,8 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PSMS.BLL;
-using PSMS.Model;
 
 namespace PSMS15
 {
@@ -29,19 +27,11 @@ namespace PSMS15
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            
-
-            UserAccount page1 = new UserAccount();
+            UserManage page1 = new UserManage();
             Content = new Frame()
             {
                 Content = page1
             };
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
