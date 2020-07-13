@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PSMS.BLL;
+using PSMS.Model;
+using PSMS.DAL;
+using PMSM.DAL;
 
 namespace PSMS15
 {
@@ -27,6 +31,18 @@ namespace PSMS15
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+            UserDAL  mb = new UserDAL();
+          
+            //int id = Convert.ToInt32(tbid.Text);
+            //int salary = Convert.ToInt32(tbsalary.Text);
+            //DateTime dt = Convert.ToDateTime(tbtime.Text);
+            DateTime dt = DateTime.Now;
+            User user = new User(1001, "haha", "haha", "haha", 50000, dt, "haha", "haha", 1);
+            mb.AddUser(user);
+            
+            MessageBox.Show("添加成功");
+            
             Info page1 = new Info();
             Content = new Frame()
             {
